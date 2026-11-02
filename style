@@ -1,0 +1,110 @@
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(#eef2ff, #f8faff);
+  font-family: Arial, sans-serif;
+  color: #111827;
+}
+
+#app {
+  width: 100%;
+  max-width: 640px;
+  padding: 20px;
+  background: #fff;
+  border-radius: 14px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+h2 { margin: 0 0 12px; font-size: 20px; }
+
+.add-row { display: flex; gap: 8px; }
+
+#todoInput {
+  flex: 1;
+  padding: 10px 12px;
+  font-size: 14px;
+  border: 1px solid #e5e7eb;
+  border-radius: 8px;
+  background: #f9fafb;
+}
+
+#addBtn {
+  padding: 0 18px;
+  border: none;
+  border-radius: 8px;
+  background: #3b82f6;
+  color: #fff;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.toolbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 12px;
+  padding-bottom: 8px;
+  border-bottom: 1px solid #e5e7eb;
+}
+.toolbar p { margin: 0; font-size: 12px; color: #6b7280; }
+
+.filterBtn {
+  padding: 6px 10px;
+  border: none;
+  border-radius: 6px;
+  background: transparent;
+  color: #6b7280;
+  font-size: 13px;
+  font-weight: bold;
+  cursor: pointer;
+}
+.filterBtn.selected { background: #dbeafe; color: #3b82f6; }
+
+#todoList { list-style: none; margin: 0; padding: 0; }
+
+#todoList li {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 12px 4px;
+  border-bottom: 1px solid #f3f4f6;
+}
+
+.text { flex: 1; }
+
+li:has(.toggle:checked) .text {
+  text-decoration: line-through;
+  color: #9ca3af;
+}
+
+.delete {
+  border: none;
+  background: transparent;
+  font-size: 16px;
+  opacity: 0.5;
+  cursor: pointer;
+}
+.delete:hover { opacity: 1; }
+
+.edit {
+  flex: 1;
+  padding: 6px 8px;
+  font-size: 14px;
+  border: 1px solid #3b82f6;
+  border-radius: 6px;
+}
+
+.footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 12px;
+  font-size: 13px;
+  color: #6b7280;
+}
+.footer button { cursor: pointer; }
